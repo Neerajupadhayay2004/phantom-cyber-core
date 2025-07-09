@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cyber-specific colors
+				cyber: {
+					matrix: 'hsl(var(--cyber-matrix))',
+					neon: 'hsl(var(--cyber-neon))',
+					warning: 'hsl(var(--cyber-warning))',
+					critical: 'hsl(var(--cyber-critical))',
+					success: 'hsl(var(--cyber-success))'
 				}
 			},
 			borderRadius: {

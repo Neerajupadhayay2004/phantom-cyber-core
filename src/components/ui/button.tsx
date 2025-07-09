@@ -9,15 +9,20 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 cyber-glow",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 critical-glow",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 neon-glow",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        cyber: "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300",
+        terminal: "bg-background text-foreground border border-border font-mono hover:border-primary/50 hover:text-primary",
+        critical: "bg-cyber-critical/20 text-cyber-critical border border-cyber-critical/30 hover:border-cyber-critical/60 hover:shadow-lg hover:shadow-cyber-critical/25",
+        success: "bg-cyber-success/20 text-cyber-success border border-cyber-success/30 hover:border-cyber-success/60 hover:shadow-lg hover:shadow-cyber-success/25",
+        warning: "bg-cyber-warning/20 text-cyber-warning border border-cyber-warning/30 hover:border-cyber-warning/60 hover:shadow-lg hover:shadow-cyber-warning/25",
       },
       size: {
         default: "h-10 px-4 py-2",
