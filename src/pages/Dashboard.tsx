@@ -2,6 +2,7 @@ import { SecurityMetrics } from "@/components/dashboard/SecurityMetrics";
 import { ThreatTimeline } from "@/components/dashboard/ThreatTimeline";
 import { SecurityChart } from "@/components/dashboard/SecurityChart";
 import { NetworkStatus } from "@/components/dashboard/NetworkStatus";
+import { RealTimeMonitor } from "@/components/dashboard/RealTimeMonitor";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -97,6 +98,9 @@ export default function Dashboard() {
 
       {/* Security Metrics */}
       <SecurityMetrics />
+
+      {/* Real-time Monitoring */}
+      <RealTimeMonitor />
 
       {/* Main Dashboard Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

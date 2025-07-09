@@ -8,112 +8,75 @@
 
 @layer base {
   :root {
-    /* Dark cyber theme base colors */
-    --background: 210 20% 8%;
-    --foreground: 120 100% 85%;
+    /* Enhanced dark cyber theme with better contrast */
+    --background: 210 25% 5%;
+    --foreground: 120 95% 88%;
 
-    --card: 210 15% 12%;
-    --card-foreground: 120 80% 90%;
+    --card: 210 20% 8%;
+    --card-foreground: 120 85% 92%;
 
-    --popover: 210 15% 12%;
-    --popover-foreground: 120 80% 90%;
+    --popover: 210 20% 8%;
+    --popover-foreground: 120 85% 92%;
 
-    /* Cyber green primary with electric blue accents */
-    --primary: 120 100% 50%;
-    --primary-foreground: 210 20% 8%;
+    /* Enhanced cyber green with electric blue accents */
+    --primary: 120 100% 45%;
+    --primary-foreground: 210 25% 5%;
 
-    --secondary: 200 100% 50%;
-    --secondary-foreground: 210 20% 8%;
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 210 25% 5%;
 
-    --muted: 210 15% 15%;
-    --muted-foreground: 120 20% 60%;
+    --muted: 210 20% 12%;
+    --muted-foreground: 120 25% 65%;
 
-    --accent: 180 100% 50%;
-    --accent-foreground: 210 20% 8%;
+    --accent: 180 100% 55%;
+    --accent-foreground: 210 25% 5%;
 
-    /* Cyber red for critical alerts */
-    --destructive: 0 100% 60%;
-    --destructive-foreground: 210 20% 8%;
+    /* Enhanced cyber red for critical alerts */
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 210 25% 5%;
 
-    --border: 120 30% 25%;
-    --input: 210 15% 15%;
-    --ring: 120 100% 50%;
+    --border: 120 40% 18%;
+    --input: 210 20% 10%;
+    --ring: 120 100% 45%;
 
-    /* Cyber-specific design tokens */
+    /* Enhanced sidebar colors */
+    --sidebar-background: 210 25% 6%;
+    --sidebar-foreground: 120 80% 85%;
+    --sidebar-primary: 120 100% 45%;
+    --sidebar-primary-foreground: 210 25% 5%;
+    --sidebar-accent: 210 20% 10%;
+    --sidebar-accent-foreground: 120 80% 85%;
+    --sidebar-border: 120 30% 20%;
+    --sidebar-ring: 120 100% 45%;
+
+    /* Enhanced cyber-specific design tokens */
     --cyber-matrix: 120 100% 40%;
     --cyber-neon: 180 100% 60%;
-    --cyber-warning: 45 100% 60%;
-    --cyber-critical: 0 100% 50%;
-    --cyber-success: 120 100% 45%;
+    --cyber-warning: 45 100% 55%;
+    --cyber-critical: 0 100% 55%;
+    --cyber-success: 120 100% 40%;
     
-    /* Gradients */
-    --gradient-cyber: linear-gradient(135deg, hsl(120 100% 50% / 0.1), hsl(180 100% 50% / 0.1));
-    --gradient-matrix: linear-gradient(180deg, hsl(120 100% 50% / 0.05), transparent);
-    --gradient-glow: radial-gradient(circle at center, hsl(120 100% 50% / 0.3), transparent);
+    /* Enhanced gradients with better contrast */
+    --gradient-cyber: linear-gradient(135deg, hsl(120 100% 45% / 0.15), hsl(180 100% 55% / 0.15));
+    --gradient-matrix: linear-gradient(180deg, hsl(120 100% 45% / 0.08), transparent);
+    --gradient-glow: radial-gradient(circle at center, hsl(120 100% 45% / 0.4), transparent);
+    --gradient-sidebar: linear-gradient(180deg, hsl(210 25% 6%), hsl(210 25% 4%));
     
-    /* Shadows and glows */
-    --shadow-cyber: 0 0 20px hsl(120 100% 50% / 0.3);
-    --shadow-neon: 0 0 30px hsl(180 100% 60% / 0.4);
-    --shadow-critical: 0 0 20px hsl(0 100% 50% / 0.4);
+    /* Enhanced shadows and glows */
+    --shadow-cyber: 0 0 25px hsl(120 100% 45% / 0.4);
+    --shadow-neon: 0 0 35px hsl(180 100% 55% / 0.5);
+    --shadow-critical: 0 0 25px hsl(0 100% 55% / 0.5);
+    --shadow-sidebar: inset 0 0 50px hsl(120 100% 45% / 0.05);
+    
+    /* Responsive breakpoints */
+    --mobile-breakpoint: 768px;
+    --tablet-breakpoint: 1024px;
+    --desktop-breakpoint: 1280px;
+
+    --radius: 0.5rem;
     
     /* Animations */
     --transition-cyber: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -250,5 +213,91 @@
   @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
+  }
+  
+  /* Responsive design utilities */
+  .responsive-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6;
+  }
+  
+  .mobile-hidden {
+    @apply hidden md:block;
+  }
+  
+  .mobile-only {
+    @apply block md:hidden;
+  }
+  
+  .tablet-up {
+    @apply hidden lg:block;
+  }
+  
+  /* Enhanced sidebar styling */
+  .sidebar-enhanced {
+    background: var(--gradient-sidebar);
+    box-shadow: var(--shadow-sidebar);
+    border-right: 1px solid hsl(var(--sidebar-border));
+  }
+  
+  /* Real-time monitoring effects */
+  .monitor-pulse {
+    animation: monitor-pulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes monitor-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.4);
+    }
+  }
+  
+  .data-stream {
+    animation: data-stream 2s linear infinite;
+  }
+  
+  @keyframes data-stream {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Mobile-first responsive breakpoints */
+  @media (max-width: 768px) {
+    .cyber-card {
+      @apply p-4;
+    }
+    
+    .responsive-padding {
+      @apply p-4;
+    }
+    
+    .mobile-stack {
+      @apply flex-col;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .tablet-layout {
+      @apply grid-cols-2;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .desktop-layout {
+      @apply grid-cols-3;
+    }
   }
 }
