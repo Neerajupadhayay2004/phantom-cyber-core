@@ -210,7 +210,7 @@ The project is configured for automatic deployment on Netlify:
 1. **Fork the repository** on GitHub
 2. **Connect to Netlify** and select your fork
 3. **Build settings** are automatically configured
-4. **Deploy** - Your site will be live at `your-site-name.netlify.app`
+4. **Deploy** - Your site will be live at `https://phantom01.netlify.app/`
 
 ### Manual Deployment
 ```bash
