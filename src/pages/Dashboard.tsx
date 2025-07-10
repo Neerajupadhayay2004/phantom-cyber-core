@@ -3,50 +3,15 @@ import { ThreatTimeline } from "@/components/dashboard/ThreatTimeline";
 import { SecurityChart } from "@/components/dashboard/SecurityChart";
 import { NetworkStatus } from "@/components/dashboard/NetworkStatus";
 import { RealTimeMonitor } from "@/components/dashboard/RealTimeMonitor";
+import { QuickActions } from "@/components/security/QuickActions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  RefreshCw, 
-  Download, 
   Settings, 
   AlertTriangle,
-  Shield,
-  Eye,
-  Globe,
   Activity
 } from "lucide-react";
-
-const quickActions = [
-  { 
-    title: "Generate Security Report",
-    description: "Create comprehensive security analysis",
-    icon: Download,
-    variant: "cyber" as const,
-    action: "report"
-  },
-  {
-    title: "Emergency Lockdown", 
-    description: "Activate security protocols",
-    icon: Shield,
-    variant: "critical" as const,
-    action: "lockdown"
-  },
-  {
-    title: "Scan All Systems",
-    description: "Full infrastructure scan",
-    icon: Eye, 
-    variant: "warning" as const,
-    action: "scan"
-  },
-  {
-    title: "Update Threat Intel",
-    description: "Refresh threat databases",
-    icon: RefreshCw,
-    variant: "success" as const,
-    action: "update"
-  }
-];
 
 const recentAlerts = [
   {
@@ -108,31 +73,8 @@ export default function Dashboard() {
         <div className="lg:col-span-2 space-y-6">
           <SecurityChart />
           
-          {/* Quick Actions */}
-          <Card className="cyber-card">
-            <CardHeader>
-              <CardTitle className="text-primary">Quick Actions</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-4">
-                {quickActions.map((action, index) => (
-                  <Button 
-                    key={index}
-                    variant={action.variant}
-                    className="h-auto p-4 flex-col items-start gap-2 hover:scale-105 transition-transform"
-                  >
-                    <div className="flex items-center gap-2 w-full">
-                      <action.icon className="w-5 h-5" />
-                      <span className="font-medium">{action.title}</span>
-                    </div>
-                    <span className="text-xs opacity-80 text-left">
-                      {action.description}
-                    </span>
-                  </Button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          {/* Enhanced Quick Actions */}
+          <QuickActions />
         </div>
 
         {/* Right Column - Status & Alerts */}
