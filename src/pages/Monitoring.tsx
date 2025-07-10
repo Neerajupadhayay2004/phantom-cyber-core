@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Activity, MonitorSpeaker, Cpu, HardDrive, Network, AlertTriangle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { SatelliteMonitor } from '@/components/monitoring/SatelliteMonitor';
 
 const systemMetrics = [
   {
@@ -127,6 +128,9 @@ export default function Monitoring() {
           </Button>
         </div>
       </div>
+
+      {/* Enhanced Satellite Monitoring Section */}
+      <SatelliteMonitor />
 
       {/* System Status Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
