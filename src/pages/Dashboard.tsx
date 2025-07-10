@@ -3,6 +3,7 @@ import { ThreatTimeline } from "@/components/dashboard/ThreatTimeline";
 import { SecurityChart } from "@/components/dashboard/SecurityChart";
 import { NetworkStatus } from "@/components/dashboard/NetworkStatus";
 import { RealTimeMonitor } from "@/components/dashboard/RealTimeMonitor";
+import { LiveSecurityOperationsCenter } from "@/components/soc/LiveSecurityOperationsCenter";
 import { QuickActions } from "@/components/security/QuickActions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -60,6 +61,9 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
+
+      {/* Live Security Operations Center */}
+      <LiveSecurityOperationsCenter />
 
       {/* Security Metrics */}
       <SecurityMetrics />
